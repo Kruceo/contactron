@@ -1,0 +1,95 @@
+*
+{
+    --content-size:100%;
+    color: #222;
+    margin: 0 auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+body
+{
+    
+    background-color: #fff;
+}
+
+input{
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding-inline-start: 10px;
+}
+
+.bar
+{
+    width: 100%;
+    
+    background-color: #529;
+    box-sizing: border-box;
+    display: flex;
+}
+.bar > input{
+    margin: 10px;
+   margin-right: auto;
+    height: 30px;
+    width: 300px;
+    
+}
+.bar > .reload
+{
+    margin:10px;
+    margin-left: auto;
+    justify-self: end;
+    width: 30px;
+    cursor: pointer;
+}
+.bar > .archive
+{
+    background-color: white;
+    margin: 0 0;
+    margin-top: auto;
+    border-radius: 5px 5px 0 0;
+    padding: 2px 5px 0px 5px;
+}
+.content
+{
+    box-sizing: border-box;
+    width: var(--content-size);
+    min-width: 400px;
+    
+    padding: 10px;
+}
+
+.box
+{
+    box-sizing: border-box;
+    background-color: #dadada;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+.box > div
+{
+    border-left: #0002 1px solid;
+    padding-left: 5px;
+    margin: 0 0;
+    text-transform: capitalize;
+}
+.box > .edit-icon
+{
+    width: 20px;
+    position: absolute;
+    left: calc(100% - 40px);
+    cursor: pointer;
+}
+.add 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+

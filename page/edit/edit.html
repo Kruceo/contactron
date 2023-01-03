@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Editor</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='edit.css'>
+    <script type="module" src='../public/juca.js'></script>
+</head>
+
+<body>
+    <h2 class="title">Editor</h2>
+    <header class="content">
+        <input type="text" id="name" placeholder="Nome" value="">
+        <div class="numbers">
+            <div watch="window.numberList.toString()" for="0;window.numberList.length;num" tabindex="1">
+                <input type="tel" loc="{{num}}" id="number" value="{{window.numberList[num]}}" placeholder="number"
+                    try="{{window.numberList = window.numberList.filter((el)=>{return el != 'x90910102020230302020101010202020399459595x'})}}">
+                <button onclick="window.numberList['{{num}}'] = 'x90910102020230302020101010202020399459595x'" tabindex="1">×</button>
+            </div>
+            <button tabindex="1" onclick="window.numberList.push('')">+</button>
+        </div>
+
+        <div class="info">
+            <div watch="window.infoList.toString() + window.infoList.length" for="0;window.infoList.length;info" tabindex="1"
+                try="{{window.infoList = window.infoList.filter((el)=>{return el != 'x90910102020230302020101010202020399459595x'})}}">
+                <input type="tel" loc="{{info}}" id="info" placeholder="info" value="{{window.infoList[info]}}">
+                <button onclick="window.infoList['{{info}}'] = 'x90910102020230302020101010202020399459595x'" tabindex="1">×</button>
+            </div>
+            <button onclick="window.infoList.push('')">+</button>
+        </div>
+
+        <button tabindex="1" id="save">Salvar</button>
+        <button tabindex="1" id="edit">Editar</button>
+    </header>
+
+
+    <script>
+        window.numberList = ['']
+
+        window.infoList = ['CPF/CNPJ:']
+
+        window.numbers = window.data ? window.data.numbers.length : 2;
+        window.info = window.data ? window.data.numbers.length : 2
+        window.document.addEventListener('change', (e) => {
+
+            if (e.target.tagName != 'INPUT') return
+            if (e.target.id == 'number') {
+                window.numberList[e.target.getAttribute('loc')] = e.target.value
+                console.log(e.target.getAttribute('loc'))
+            }
+            if (e.target.id == 'info') {
+                window.infoList[e.target.getAttribute('loc')] = e.target.value
+                console.log(e.target.getAttribute('loc'))
+            }
+        })
+        window.addEventListener('person', (e) => {
+            window.person = e.person
+            console.log(e)
+            if (!window.person) {
+                document.querySelector('#edit').style.display = 'none'
+                document.querySelector('#save').style.display = 'block'
+            }
+            else {
+                
+                window.infoList = window.person.info
+                window.numberList = window.person.numbers
+                document.querySelector('#name').value = window.person.name
+                document.querySelector('#edit').style.display = 'block'
+                document.querySelector('#save').style.display = 'none'
+            }
+        })
+    </script>
+</body>
+
+</html>
