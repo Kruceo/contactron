@@ -1,17 +1,6 @@
 [
   {
     "numbers": [
-      "9969960023"
-    ],
-    "info": [
-      "Jogador do Vasco",
-      "CPF: 199200300"
-    ],
-    "name": "Romário",
-    "id": 5
-  },
-  {
-    "numbers": [
       "principal:99922200",
       "secundario:44550909",
       "emergencia:44242424"
@@ -49,26 +38,6 @@
   },
   {
     "numbers": [
-      "999925022"
-    ],
-    "info": [
-      "CPF/CNPJ:14408790900"
-    ],
-    "name": "Morty Smith",
-    "id": 11
-  },
-  {
-    "numbers": [
-      "19990000"
-    ],
-    "info": [
-      "CPF/CNPJ:21312313231"
-    ],
-    "name": "Hitmom Lee",
-    "id": 7
-  },
-  {
-    "numbers": [
       "Trabalho:99920000"
     ],
     "info": [
@@ -76,30 +45,6 @@
     ],
     "name": "Cristiano Ronaldo",
     "id": 12
-  },
-  {
-    "numbers": [
-      "44508909"
-    ],
-    "info": [
-      "CPF/CNPJ:8091234440333",
-      "CEO: Rafael V.",
-      "Representante: Maria V."
-    ],
-    "name": "Kruceo Inc.",
-    "id": 13
-  },
-  {
-    "numbers": [
-      "1299002202",
-      "4599930201",
-      "4564800022"
-    ],
-    "info": [
-      "Rua 1920 Murilo Coutinho"
-    ],
-    "name": "Edmundo",
-    "id": 1
   },
   {
     "numbers": [
@@ -131,13 +76,5 @@
     ],
     "name": "Juninho Pernambucano",
     "id": 4
-  },
-  {
-    "numbers": [
-      "88850000"
-    ],
-    "info": [],
-    "name": "Cancum increments LTDA",
-    "id": 15
   }
 ]
