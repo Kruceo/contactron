@@ -58,6 +58,9 @@ function getObj() {
 if (!fs.existsSync(path.join(__dirname, 'data', 'buff'))) {
     fs.writeFileSync(path.join(__dirname, 'data', 'buff'), "9999")
 }
+if (!fs.existsSync(path.join(__dirname, 'data', 'save.json'))) {
+    fs.writeFileSync(path.join(__dirname, 'data', 'save.json'), "[]")
+}
 
 function addToBuff(add) {
     let value = parseInt(fs.readFileSync(path.join(__dirname, 'data', 'buff')))
@@ -72,5 +75,7 @@ function removeObj(id)
     })
     fs.writeFileSync('data/save.json', JSON.stringify(newList, ' ', 2))
 }
+
+for(let i = 0; i < 100; i++)
 
 module.exports = {getFromId,addObj,getBuff,editObj,getObj,addToBuff,removeObj}

@@ -15,10 +15,9 @@
 <body>
     <header class="bar">
         <input type="text" id="search" placeholder="Pesquisa">
-        <img class="reload" src="../../resources/reload.png" alt=""
-            onclick="window.refreshData()">
+        <img class="reload" src="../../resources/reload.png" alt="" onclick="window.refreshData()">
 
-      
+
     </header>
     <header class="content">
         <div class="box add" onclick="window.new()">+</div>
@@ -32,10 +31,8 @@
                 <p foreach="each.info;info">{{info}}</p>
             </div>
 
-            <img class='edit-icon' onclick="window.edit('{{each.id}}')"
-                src="../../resources/edit.png" alt="">
-            <img class='trash-icon' onclick="window.remove('{{each.id}}')"
-                src="../../resources/trash.png" alt="">
+            <img class='edit-icon' onclick="window.edit('{{each.id}}')" src="../../resources/edit.png" alt="">
+            <img class='trash-icon' onclick="window.remove('{{each.id}}')" src="../../resources/trash.png" alt="">
 
         </div>
     </header>
@@ -48,15 +45,20 @@
         }]
         window.filter = window.data
         document.querySelector('#search').addEventListener('input', (e) => {
-            
+
             let filtered = window.data.filter(each => {
                 return each.name.toLowerCase().includes(e.target.value.toLowerCase())
             })
-            window.filter = filtered.sort((a,b)=>
-            {
-                console.log(a.id,b.id)
-                if(a.id > b.id)return 1
-                if(a.id < b.id)return -1
+            window.filter = filtered.sort((a, b) => {
+                console.log(a.id, b.id)
+                if (a.id > b.id) return 1
+                if (a.id < b.id) return -1
+                return 0
+            }).sort((a, b) => {
+                if (a.name.toLowerCase().startsWith(e.target.value.toLowerCase())) { return -1 }
+                else {
+                    return 1
+                }
                 return 0
             })
         })

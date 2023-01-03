@@ -24,7 +24,7 @@ input{
 {
     width: 100%;
     
-    background-color: #529;
+    background-color: #559;
     box-sizing: border-box;
     display: flex;
 }
@@ -32,16 +32,23 @@ input{
     margin: 10px;
    margin-right: auto;
     height: 30px;
-    width: 300px;
+    width: 250px;
     
 }
+
 .bar > .reload
 {
     margin:10px;
     margin-left: auto;
     justify-self: end;
     width: 30px;
+    height: 30px;
     cursor: pointer;
+    transition: rotate 500ms;
+}
+.bar > .reload:hover
+{
+   rotate: 180deg;
 }
 .bar > .archive
 {
