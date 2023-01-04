@@ -7,10 +7,10 @@ app.whenReady().then(() => {
 
   window['main'] = new BrowserWindow(
     {
-
-      width: 600,
+      
+      width: 700,
       height: 600,
-      resizable: true,
+      minWidth:600,
       webPreferences: {
         nodeIntegration: true,
         contextIsolation:false,
@@ -19,6 +19,7 @@ app.whenReady().then(() => {
     })
     
   window['main'].webContents.openDevTools()
+  window['main'].setMenu(null)
   window['main'].loadFile('page/main/index.html')
   //window['main'].loadURL('http://localhost:5173/page/main/index.html')
   

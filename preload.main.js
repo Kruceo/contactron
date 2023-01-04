@@ -25,7 +25,9 @@ window.addEventListener('load', () => {
     window.edit = (id) => { ipcRenderer.send('edit', id) }
     window.new = (id) => { ipcRenderer.send('edit', id) }
     window.remove = (id) => {
-        const result = window.genDialog({ message: "Tem certeza?", buttons: ["Sim", "Não"] })
+        const result = window.genDialog({ message: "Tem certeza?", buttons: ["Sim", "Não"],closable:false })
+
+        console.log(result)
         if (result == 0) {
             removeObj(id); window.refreshData()
         }

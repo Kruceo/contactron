@@ -9,7 +9,7 @@ data.forEach((element,index) => {
     element.id = index
     
 });
-fs.writeFileSync(path.join(__dirname,'../data','save.json'),''+JSON.stringify(data))
-fs.writeFileSync(path.join(__dirname,'../data','buff'),''+data.length)
+fs.writeFileSync(path.join(__dirname,'../data','save.json'),''+JSON.stringify(data,' ',2))
+fs.writeFileSync(path.join(__dirname,'../data','buff'),''+(data.length -1))
 
 

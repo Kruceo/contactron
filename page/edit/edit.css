@@ -68,6 +68,8 @@ input{
     height: 35px;
     grid-column: span 3;
     width: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 button
 {
