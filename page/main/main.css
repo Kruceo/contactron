@@ -22,8 +22,11 @@ input{
 
 .bar
 {
+    z-index: 10;
     width: 100%;
-    
+    position: fixed;
+    top: 0px;
+    left: 0px;
     background-color: #559;
     box-sizing: border-box;
     display: flex;
@@ -44,11 +47,11 @@ input{
     width: 30px;
     height: 30px;
     cursor: pointer;
-    transition: rotate 500ms;
+    transition: rotate 750ms;
 }
 .bar > .reload:hover
 {
-   rotate: 180deg;
+   rotate: 350deg;
 }
 .bar > .archive
 {
@@ -63,7 +66,7 @@ input{
     box-sizing: border-box;
     width: var(--content-size);
     min-width: 400px;
-    
+    margin-top: 50px;
     padding: 10px;
 }
 

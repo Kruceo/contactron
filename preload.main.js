@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
             if (a.id < b.id) return -1
             return 0
         });
-        window.forceUpdate = Math.random() * 1000
+        window.forceUpdate = Math.random() * 999 * 2000
     }
     window.edit = (id) => { ipcRenderer.send('edit', id) }
     window.new = (id) => { ipcRenderer.send('edit', id) }

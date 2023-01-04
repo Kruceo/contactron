@@ -20,7 +20,9 @@ app.whenReady().then(() => {
     
   window['main'].webContents.openDevTools()
   window['main'].loadFile('page/main/index.html')
-
+  //window['main'].loadURL('http://localhost:5173/page/main/index.html')
+  
+  
 })
 ipcMain.on('option-dialog',(event,value)=>
 {
