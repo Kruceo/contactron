@@ -13,21 +13,26 @@
 <body>
     <h2 class="title">Editor</h2>
     <header class="content">
-        <input type="text" id="name" placeholder="Nome" value="">
+        <div id="name-box">
+            <input type="text" id="name" placeholder="Nome" value="">
+        </div>
         <div class="numbers">
             <div watch="window.numberList.toString()" for="0;window.numberList.length;num" tabindex="1">
                 <input type="tel" loc="{{num}}" id="number" value="{{window.numberList[num]}}" placeholder="number"
                     try="{{window.numberList = window.numberList.filter((el)=>{return el != 'x90910102020230302020101010202020399459595x'})}}">
-                <button onclick="window.numberList['{{num}}'] = 'x90910102020230302020101010202020399459595x'" tabindex="1">×</button>
+                <button onclick="window.numberList['{{num}}'] = 'x90910102020230302020101010202020399459595x'"
+                    tabindex="1">×</button>
             </div>
             <button tabindex="1" onclick="window.numberList.push('')">+</button>
         </div>
 
         <div class="info">
-            <div watch="window.infoList.toString() + window.infoList.length" for="0;window.infoList.length;info" tabindex="1"
+            <div watch="window.infoList.toString() + window.infoList.length" for="0;window.infoList.length;info"
+                tabindex="1"
                 try="{{window.infoList = window.infoList.filter((el)=>{return el != 'x90910102020230302020101010202020399459595x'})}}">
                 <input type="tel" loc="{{info}}" id="info" placeholder="info" value="{{window.infoList[info]}}">
-                <button onclick="window.infoList['{{info}}'] = 'x90910102020230302020101010202020399459595x'" tabindex="1">×</button>
+                <button onclick="window.infoList['{{info}}'] = 'x90910102020230302020101010202020399459595x'"
+                    tabindex="1">×</button>
             </div>
             <button onclick="window.infoList.push('')">+</button>
         </div>
@@ -64,7 +69,7 @@
                 document.querySelector('#save').style.display = 'block'
             }
             else {
-                
+
                 window.infoList = window.person.info
                 window.numberList = window.person.numbers
                 document.querySelector('#name').value = window.person.name

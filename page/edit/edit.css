@@ -63,13 +63,18 @@ input{
     
     
 }
-.content #name
+.content > #name-box
 {
     height: 35px;
-    grid-column: span 3;
+    grid-column: span 2;
     width: 100%;
     border-radius: 10px;
     box-sizing: border-box;
+}
+#name-box>#name
+{
+    width: 100%;
+    border-radius: 10px;
 }
 button
 {
